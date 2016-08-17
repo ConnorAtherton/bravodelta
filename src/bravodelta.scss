@@ -1,0 +1,49 @@
+//
+// Requires js to change the classes on the elements.
+//
+.TextEffect--bravodelta {
+  font-size: .85rem;
+  line-height: 1.52941;
+  letter-spacing: .45em;
+  margin-top: -.3em;
+
+  // Need pseudo-elements
+  span {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-55%);
+      background: #0e182d;
+      width: 0;
+      height: 1.2em;
+    }
+  }
+
+  span.state-1 {
+    color: transparent;
+  }
+
+  span.state-2 {
+    &:before {
+      width: 1px;
+    }
+  }
+
+  span.state-3 {
+    &:before {
+      width: 1em;
+    }
+  }
+
+  span.state-4 {
+    color: inherit;
+
+    &:before {
+      display: none;
+    }
+  }
+}
